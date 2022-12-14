@@ -12,6 +12,7 @@ def index():
     seller = str(data["seller"])
     PARAMS_id = {'id': int(seller)}
     # PARAMS_id = json.dumps(PARAMS_id, indent=4)
+    # PARAMS_id = json.dumps(PARAMS_id, indent=4)
     r_user = requests.post(url=URL_user, json=PARAMS_id)
     if r_user.status_code == 404:
         return Response("not found user", status=404, content_type="text/plain")
